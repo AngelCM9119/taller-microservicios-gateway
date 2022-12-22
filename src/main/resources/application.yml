@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+      - id: formacionMS1
+        uri: lb://nttdata-taller-microservicios-ms1
+        predicates:
+        - Path=/whoAreYou/**
+
+server:
+  port: 9090
